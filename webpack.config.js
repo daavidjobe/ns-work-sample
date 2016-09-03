@@ -1,7 +1,7 @@
 
 module.exports = {
   entry: [
-   './javascript/index.js' 
+   './javascript/app.js' 
   ],
   output: {
     path: './client',
@@ -27,7 +27,11 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        loader: "style!css!less?sourceMap"
+        loader: "style!css!less"
+      },
+      {
+        test: /\.html$/,
+        loader: 'raw' 
       }
     ]
   }

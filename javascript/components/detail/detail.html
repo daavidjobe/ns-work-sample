@@ -1,0 +1,24 @@
+<div class="detail">
+  <topbar></topbar>
+  <div class="columns">
+    <div class="left">
+      <p>title: {{vm.movie.original_title}}</p>
+      <p>released: {{vm.movie.release_date}}</p>
+      <p>homepage: <a href="{{vm.movie.homepage}}">{{vm.movie.homepage}}</a></p>
+      <p>tagline: {{vm.movie.tagline}}</p>
+      <p>votes: {{vm.movie.vote_count}}</p>
+      <p>score: {{vm.movie.vote_average}}</p>
+      <p>{{vm.movie.overview}}</p>
+      <ul>
+        <li ng-repeat="genre in vm.movie.genres track by $index">
+          <p>{{genre.name}}</p>
+        </li>
+      </ul>
+      </div>
+    <div class="right">
+      <div class="poster">
+        <img src="http://image.tmdb.org/t/p/w500/{{vm.movie.poster_path}}?api_key=5353652c477331facf28d9842f7b31b3" />
+      </div>
+    </div>
+  </div>
+</div>
