@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node ./server.js",
-    "postinstall": "npm run build",
+    "postinstall": "npm run build:prod",
     "build": "webpack",
     "build:prod": "NODE_ENV=production webpack -p --config webpack.prod.config.js",
     "dev": "webpack-dev-server"
