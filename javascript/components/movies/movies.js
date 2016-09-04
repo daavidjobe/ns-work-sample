@@ -2,7 +2,7 @@ import angular from 'angular'
 import uiRouter from 'angular-ui-router'
 import moviesComponent from './movies.component'
 import moviesService from './movies.service'
-import topbarComponent from '../topbar/topbar.component'
+
 import './movies.less'
 
 
@@ -22,7 +22,7 @@ moviesModule.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     })
 })
 
-.component('movies', moviesComponent)
-.service('moviesService', moviesService)
+  .component('movies', moviesComponent)
+  .service('moviesService', moviesService)
 
 export default moviesModule

@@ -1,30 +1,31 @@
 <main>
   <topbar></topbar>
 
-  
+
   <div class="movies">
     <div class="controls">
-      <div><search></search></div>
       <div>
-        <button class="btn-primary" ng-class="vm.sorted === 'popular' ? 'btn-active' : ''"
-        ng-click="vm.getMoviesBy('popular')">popular</button>
-        <button class="btn-primary" ng-class="vm.sorted === 'top_rated' ? 'btn-active' : ''"
-        ng-click="vm.getMoviesBy('top_rated')">top rated</button>
-        <button class="btn-primary" ng-class="vm.sorted === 'upcoming' ? 'btn-active' : ''"
-        ng-click="vm.getMoviesBy('upcoming')">upcoming</button>
+        <search></search>
+      </div>
+      <div>
+        <button class="btn-primary" ng-class="vm.sorted === 'popular' ? 'btn-active' : ''" ng-click="vm.getMoviesBy('popular')">popular</button>
+        <button class="btn-primary" ng-class="vm.sorted === 'top_rated' ? 'btn-active' : ''" ng-click="vm.getMoviesBy('top_rated')">top rated</button>
+        <button class="btn-primary" ng-class="vm.sorted === 'upcoming' ? 'btn-active' : ''" ng-click="vm.getMoviesBy('upcoming')">upcoming</button>
       </div>
     </div>
-    
-    <div class="movie-list">
-      <ul ng-repeat="movie in vm.movies.results track by movie.id">
-        <li class="movie-item" ng-click="vm.viewDetails(movie.id)">
-          <img src="http://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}?api_key=5353652c477331facf28d9842f7b31b3" />
-          <p class="title">{{movie.title}}</p>
-          <p class="vote-score">release date: {{movie.release_date}}</p>
-          <p class="vote-count">votes: {{movie.vote_count}}</p>
-        </li>
+
+    <ul class="movie-list">
+      <li ng-repeat="movie in vm.movies.results track by movie.id" class="movie-item" ng-click="vm.viewDetails(movie.id)">
+        <div class="image-container">
+          <img ng-src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}?api_key=5353652c477331facf28d9842f7b31b3"
+          onerror="this.src = 'https://www.sbindependent.org/wp-content/themes/fearless/images/missing-image-640x360.png'">
+        </div>
+        <p class="release-date">release date: {{movie.release_date}}</p>
+        <p class="title">{{movie.title}}</p>
+        <p class="vote-score">score: {{movie.vote_average}}</p>
+      </li>
     </ul>
-    </div>
+
     <div class="prev-next-buttons">
       <button class="btn-primary" ng-click="vm.getPreviousPage()">previous</button>
       <button class="btn-primary" ng-click="vm.getNextPage()">next</button>

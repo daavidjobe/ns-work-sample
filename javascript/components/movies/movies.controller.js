@@ -15,6 +15,7 @@ class MoviesController {
   getMovies() {
     this.service.fetchMovies(this.page, this.sorted)
       .then(res => {
+        console.log(res.data)
         this.movies = res.data
       })
   }

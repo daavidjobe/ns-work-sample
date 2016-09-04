@@ -2,22 +2,29 @@
   <topbar></topbar>
   <div class="columns">
     <div class="left">
-      <p>title: {{vm.movie.original_title}}</p>
-      <p>released: {{vm.movie.release_date}}</p>
-      <p>homepage: <a href="{{vm.movie.homepage}}">{{vm.movie.homepage}}</a></p>
-      <p>tagline: {{vm.movie.tagline}}</p>
-      <p>votes: {{vm.movie.vote_count}}</p>
-      <p>score: {{vm.movie.vote_average}}</p>
-      <p>{{vm.movie.overview}}</p>
-      <ul>
+      <p class="label">title:</p>
+      <p>{{vm.movie.original_title}}</p>
+      <p class="label">released:</p>
+      <p>{{vm.movie.release_date}}</p>
+      <p class="label">homepage:</p>
+      <p><a href="{{vm.movie.homepage}}">{{vm.movie.homepage}}</a></p>
+      <p class="label">tagline:</p>
+      <p>{{vm.movie.tagline}}</p>
+      <p class="label">votes:</p>
+      <p>{{vm.movie.vote_count}}</p>
+      <p class="label">score:</p>
+      <p>{{vm.movie.vote_average}}</p>
+      <p class="overview">{{vm.movie.overview}}</p>
+      <ul class="genres">
         <li ng-repeat="genre in vm.movie.genres track by $index">
-          <p>{{genre.name}}</p>
+          <p class="tag">{{genre.name}}</p>
         </li>
       </ul>
       </div>
     <div class="right">
       <div class="poster">
-        <img src="http://image.tmdb.org/t/p/w500/{{vm.movie.poster_path}}?api_key=5353652c477331facf28d9842f7b31b3" />
+        <img src="https://image.tmdb.org/t/p/w500/{{vm.movie.poster_path}}?api_key=5353652c477331facf28d9842f7b31b3" 
+        onerror="this.src = 'http://homemoneynetwork.com/images/bg.jpg'"/>
       </div>
     </div>
   </div>

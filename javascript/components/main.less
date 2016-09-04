@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  display: border-box;
 }
 
 body {
@@ -41,4 +42,16 @@ h1, h2, h3, h4, p, div, span {
   &:hover, &:active {
     background-color: @secondary-color;
   }
+}
+
+.label {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.tag {
+  background: @primary-color;
+  padding: 3px 7px;
+  border-radius: 4px;
 }

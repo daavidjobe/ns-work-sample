@@ -6,7 +6,6 @@
   align-items: stretch;
   color: #ddd;
   .columns {
-    min-height: 500px;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -17,7 +16,20 @@
     }
     .left {
       padding: 20px;
-      background-color: darken(@secondary-color, 15%)
+      background-color: darken(@secondary-color, 15%);
+      .overview {
+        padding: 20px 0;
+        font-style: italic;
+        line-height: 23px;
+      }
+      .genres {
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        p {
+          margin: 10px 10px 0 0;
+        }
+      }
     }
     .right {
       img {

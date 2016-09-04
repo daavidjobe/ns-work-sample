@@ -1,3 +1,4 @@
+@import "../variables.less";
 
 .movies {
   .controls {
@@ -21,27 +22,33 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    ul {
-      list-style: none;
-    }
+    list-style: none;
+    
     .movie-item {
-      flex: 1;
       margin: 10px;
       cursor: pointer;
       background: #eee;
       box-shadow: 0 0 25px 3px #000;
+      width: 280px;
+      position: relative;
       p {
         padding: 5px;
       }
-      img {
-        max-width: 280px;
-        &:hover {
-          
+      .release-date {
+        position: absolute;
+        top: 130px;
+        color: #eee !important;
+      }
+      .image-container {
+        min-width: 280px;
+        min-height: 157px;
+        img {
+          width: 100%;
         }
       }
     }
     @media (max-width: 400px) {
-      display: block;
+      justify-content: center;
       .movie-item {
         text-align: center;
       }
