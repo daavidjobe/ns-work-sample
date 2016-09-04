@@ -10,7 +10,9 @@ let moviesModule = angular.module('movies', [
   uiRouter
 ])
 
-.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
+moviesModule.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
+
+moviesModule.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
   $urlRouterProvider.otherwise('/')
   $locationProvider.html5Mode(true)
   $stateProvider

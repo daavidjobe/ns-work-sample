@@ -2,7 +2,7 @@
 
 const key =  '5353652c477331facf28d9842f7b31b3'
 
-export default class MoviesService {
+class MoviesService {
   
   constructor($http) {
     this.$http = $http;
@@ -31,8 +31,8 @@ export default class MoviesService {
       console.log(err, status)
     })
   }
-
-
-
-
 }
+
+MoviesService.$inject = ['$http']
+
+export default MoviesService

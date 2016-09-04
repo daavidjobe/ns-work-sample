@@ -1,6 +1,6 @@
 
 
-export default class SearchController {
+class SearchController {
 
   constructor($state, moviesService) {
     this.name = 'search'
@@ -21,7 +21,7 @@ export default class SearchController {
         this.movies = res.data
       })
   }
-
-
 }
+SearchController.$inject = ['$state', 'moviesService']
+export default SearchController
 

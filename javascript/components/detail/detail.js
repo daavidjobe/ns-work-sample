@@ -9,7 +9,9 @@ let detailModule = angular.module('detail', [
   uiRouter
 ])
 
-.config(($stateProvider, $urlRouterProvider) => {
+detailModule.$inject = ['$stateProvider', '$urlRouterProvider']
+
+detailModule.config(($stateProvider, $urlRouterProvider) => {
   $urlRouterProvider.otherwise('/')
 
   $stateProvider

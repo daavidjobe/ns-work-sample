@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -40,6 +41,9 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('[name].css', {
       allChunks: true
+    }),
+    new ngAnnotatePlugin({
+      add: true
     })
   ],
   postcss: function () {

@@ -1,8 +1,7 @@
 
 
-export default class MoviesController {
+class MoviesController {
 
-  
   constructor(moviesService, $state) {
     this.name = 'movies'
     this.results = {}
@@ -43,4 +42,7 @@ export default class MoviesController {
   }
 
 }
+
+MoviesController.$inject = ['moviesService', '$state']
+export default MoviesController
 

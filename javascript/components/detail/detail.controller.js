@@ -1,6 +1,6 @@
 
 
-export default class DetailController {
+class DetailController {
 
   constructor($state, moviesService) {
     this.name = 'detail'
@@ -17,6 +17,7 @@ export default class DetailController {
         this.movie = res.data
       })
   }
-
 }
+DetailController.$inject = ['$state', 'moviesService']
+export default DetailController
 
