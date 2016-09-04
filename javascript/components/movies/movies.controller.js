@@ -17,7 +17,6 @@ export default class MoviesController {
     this.service.fetchMovies(this.page, this.sorted)
       .then(res => {
         this.movies = res.data
-        console.log(this.movies)
       })
   }
 

@@ -12,10 +12,8 @@ export default class DetailController {
 
   getMovie() {
     let id = this.$state.params.id
-    
     this.service.fetchMovie(id)
       .then(res => {
-        console.log(res)
         this.movie = res.data
       })
   }

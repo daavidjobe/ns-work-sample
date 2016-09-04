@@ -1,12 +1,14 @@
+const webpack = require('webpack')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  entry: [
-   './javascript/app.js' 
-  ],
+  entry: {
+    app: './javascript/app.js'
+  },
   output: {
     path: './client',
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
   devtool: 'eval',
   devServer: {
@@ -27,12 +29,20 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        loader: "style!css!less"
+        loader: ExtractTextPlugin.extract('style', 'css!postcss!less?sourceMap')
       },
       {
         test: /\.html$/,
-        loader: 'raw' 
+        loader: 'raw'
       }
     ]
+  },
+  plugins: [
+    new ExtractTextPlugin('[name].css', {
+      allChunks: true
+    })
+  ],
+  postcss: function () {
+    return [require('postcss-cssnext'), require('precss')]
   }
-};
+}
