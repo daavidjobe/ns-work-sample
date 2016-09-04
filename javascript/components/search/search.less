@@ -1,3 +1,26 @@
+@import "../variables.less";
+
 .search {
- 
+ position: relative;
+ .results {
+   position: absolute;
+   background-color: #fff;
+   list-style: none;
+   min-width: 280px;
+   li {
+     display: flex;
+     justify-content: space-between;
+     border-bottom: 1px solid #000;
+     cursor: pointer;
+     &:hover {
+       background-color: @primary-color;
+       color: #fff;
+     }
+     p {
+       flex: 1;
+       padding: 5px 0;
+       flex-basis: 100px;
+     }
+   }
+ }
 }

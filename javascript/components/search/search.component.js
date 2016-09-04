@@ -1,5 +1,5 @@
-import template from './search.html';
-import controller from './search.controller';
+import template from './search.html'
+import controller from './search.controller'
 
 let searchComponent = {
   restrict: 'E',
@@ -8,6 +8,6 @@ let searchComponent = {
   controller,
   controllerAs: 'vm',
   bindToController: true
-};
+}
 
-export default searchComponent;
+export default searchComponent

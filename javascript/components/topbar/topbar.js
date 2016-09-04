@@ -6,6 +6,6 @@ let topbarModule = angular.module('topbar', [
   uiRouter
 ])
 
-.directive('topbar', topbarComponent);
+.directive('topbar', topbarComponent)
 
-export default topbarModule;
+export default topbarModule

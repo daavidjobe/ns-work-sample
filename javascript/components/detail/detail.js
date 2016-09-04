@@ -10,16 +10,16 @@ let detailModule = angular.module('detail', [
 ])
 
 .config(($stateProvider, $urlRouterProvider) => {
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/')
 
   $stateProvider
     .state('detail', {
       url: '/detail/:id',
       template: '<detail></detail>'
-    });
+    })
 })
 
 .component('detail', detailComponent)
 .service('moviesService', moviesService)
 
-export default detailModule;
+export default detailModule

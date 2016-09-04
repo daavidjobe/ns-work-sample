@@ -23,7 +23,7 @@ export default class MoviesController {
 
   getMoviesBy(sorted) {
     if(this.sorted !== sorted) {
-      this.page = 1;
+      this.page = 1
     }
     this.sorted = sorted
     this.getMovies()

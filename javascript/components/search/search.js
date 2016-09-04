@@ -12,4 +12,4 @@ let searchModule = angular.module('search', [
 .component('search', searchComponent)
 .service('moviesService', moviesService)
 
-export default searchModule;
+export default searchModule

@@ -26,7 +26,7 @@ export default class MoviesService {
 
   search(query) {
      return this.$http.get(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${key}`)
-    .success(res => console.log(res))
+    .success(res => res.data)
     .error((err, status) => {
       console.log(err, status)
     })

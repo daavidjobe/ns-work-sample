@@ -10,4 +10,4 @@ export default angular.module('app.components', [
   Detail.name,
   Topbar.name,
   Search.name
-]);
+])

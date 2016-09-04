@@ -1,5 +1,5 @@
-import template from './detail.html';
-import controller from './detail.controller';
+import template from './detail.html'
+import controller from './detail.controller'
 
 let detailComponent = {
   restrict: 'E',
@@ -10,4 +10,4 @@ let detailComponent = {
   bindToController: true
 };
 
-export default detailComponent;
+export default detailComponent

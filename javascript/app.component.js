@@ -1,4 +1,4 @@
-import template from './app.html';
+import template from './app.html'
 
 const appComponent = () => {
   return {
@@ -7,4 +7,4 @@ const appComponent = () => {
   };
 };
 
-export default appComponent;
+export default appComponent

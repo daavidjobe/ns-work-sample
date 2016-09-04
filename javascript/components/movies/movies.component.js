@@ -1,5 +1,5 @@
-import template from './movies.html';
-import controller from './movies.controller';
+import template from './movies.html'
+import controller from './movies.controller'
 
 let moviesComponent = {
   restrict: 'E',
@@ -8,6 +8,6 @@ let moviesComponent = {
   controller,
   controllerAs: 'vm',
   bindToController: true
-};
+}
 
-export default moviesComponent;
+export default moviesComponent

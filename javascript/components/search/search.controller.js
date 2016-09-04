@@ -6,12 +6,20 @@ export default class SearchController {
     this.name = 'search'
     this.$state = $state
     this.service = moviesService 
-    this.query = ""   
+    this.query = ""
+  }
+
+  viewDetails(id) {
+    this.$state.go('detail', { id })
   }
 
   doSearch() {
+    this.movies = {}
     if(this.query !== '')
     this.service.search(this.query)
+      .then(res => {
+        this.movies = res.data
+      })
   }
 
 

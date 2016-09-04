@@ -1,6 +1,6 @@
 
 export default class TopbarController {
   constructor() {
-    this.name = 'navbar';
+    this.name = 'topbar'
   }
 }

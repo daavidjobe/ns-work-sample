@@ -1,5 +1,5 @@
-import template from './topbar.html';
-import controller from './topbar.controller';
+import template from './topbar.html'
+import controller from './topbar.controller'
 
 let topbarComponent = () => {
   return {
@@ -12,4 +12,4 @@ let topbarComponent = () => {
   };
 };
 
-export default topbarComponent;
+export default topbarComponent
